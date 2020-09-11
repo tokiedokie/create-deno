@@ -8,5 +8,5 @@ deno run --reload --allow-run --allow-write https://raw.githubusercontent.com/to
 
 ## TODO
 
-- make chooseable target directory
-- make chooseable library and binary
+- make the target selectable
+- allow selection of modules and binaries
