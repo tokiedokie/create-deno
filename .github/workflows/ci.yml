@@ -38,7 +38,9 @@ jobs:
         # run: deno test -A --unstable
       
       - name: fmt
+        if: matrix.os != 'windows-latest'
         run: deno fmt --check
       
       - name: lint
+        if: matrix.os != 'windows-latest'
         run: deno lint --unstable
