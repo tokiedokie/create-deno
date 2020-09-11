@@ -1,7 +1,8 @@
 import { mainDataSrc, versionDataSrc } from "./data_src.ts";
 
-await writeFiles();
-gitInit();
+const target_path = Deno.args[0];
+await writeFiles(target_path);
+gitInit(target_path);
 
 async function writeFiles(target_path = "."): Promise<void> {
   await Deno.mkdir(`${target_path}/src`, { recursive: true });
