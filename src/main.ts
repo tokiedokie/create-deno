@@ -3,13 +3,15 @@ import { mainDataSrc, versionDataSrc } from "./data_src.ts";
 main();
 
 async function main() {
-  const target_path = Deno.args[0] === "--force" ? Deno.args[1] : Deno.args[0]
-  
+  const target_path = Deno.args[0] === "--force" ? Deno.args[1] : Deno.args[0];
+
   if (await isDirEmpty(target_path) || Deno.args.includes("--force")) {
     await writeFiles(target_path);
     await gitInit(target_path);
   } else {
-    console.warn("dir is not empty. if you really create deno project in the directory use --force.");
+    console.warn(
+      "dir is not empty. if you really create deno project in the directory use --force.",
+    );
   }
 }
 
