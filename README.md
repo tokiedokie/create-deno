@@ -9,4 +9,3 @@ deno run --allow-run --allow-write https://raw.githubusercontent.com/tokiedokie/
 ## TODO
 
 - allow selection of modules and binaries
-- ask if target is not empty
